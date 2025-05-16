@@ -37,5 +37,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // int main()
 // {
-// 	printf("%s\n", ft_strnstr("abcdef", "c", 4));
+// 	ft_printf("kaak e?");
+// 	ft_printf("kaak e?");
+// 	ft_printf("kaak e?");
+// 	ft_printf("kaak e?");
+// 	ft_printf("kaak e?");
+// 	ft_printf("kaak e?");
+// 	ft_printf("kaak e?");
 // }

@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <strings.h>
 # include <ctype.h>
+# include "ft_printf/ft_printf.h"
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

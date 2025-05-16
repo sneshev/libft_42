@@ -24,7 +24,13 @@ BONUS = ft_lstsize_bonus.c ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
-all: $(NAME)
+PRINTF_DIR = ft_printf
+PRINTF_LIB = $(PRINTF_DIR)/libftprintf.a
+
+all: $(NAME) printf
+
+printf: 
+	$(MAKE) -C $(PRINTF_DIR)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -34,9 +40,10 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS) a.out
+	$(MAKE) -C $(PRINTF_DIR) clean
 
 fclean: clean
-	rm -f $(NAME) a.out
+	rm -f $(NAME) $(PRINTF_LIB) a.out
 
 re: fclean all
 
